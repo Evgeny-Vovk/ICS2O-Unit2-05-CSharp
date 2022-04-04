@@ -6,29 +6,29 @@ using System;
 
 class Program
 {
-    public static void Main(string[] args)
-    {
-      //input
-        int length;
-        int width;
-
-        Console.WriteLine("This program finds the area and perimeter of a rectangle.");
+        public static void Main(string[] args)
+        {
+        //input
+        float hours;
+        float rate;
+      
+        Console.WriteLine("This program finds the payment you should get.");
         Console.WriteLine("");
 
-        Console.Write("Enter the length(mm): ");
-        length = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the width(mm): ");
-        width = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the hours worked: ");
+        hours = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the hourly rate: 2");
+        rate = Convert.ToInt32(Console.ReadLine());
 
-      //process
-        int area = (length * width);
-        int perimeter = 2 * (length + width);
+        //process
+        double pay  = (hours * rate) * (1 - 0.18) ;
+        double taxes = ((hours * rate) * 0.18);
 
-      //output
+        //output
         Console.WriteLine("");
-        Console.WriteLine("The area is: " + area + "mm².");
-        Console.WriteLine("The perimeter is: " + perimeter + "mm.");
+        Console.WriteLine("your pay will be: $" + pay.ToString("0.00") + ".");
+        Console.WriteLine("The gevernment will take: $" + taxes + ".");
 
         Console.WriteLine("\nDone.");
-  }
+        }
 }

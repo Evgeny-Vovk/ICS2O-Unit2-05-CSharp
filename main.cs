@@ -6,8 +6,8 @@ using System;
 
 class Program
 {
-        public static void Main(string[] args)
-        {
+    public static void Main(string[] args)
+    {
         //input
         float hours;
         float rate;
@@ -27,8 +27,8 @@ class Program
         //output
         Console.WriteLine("");
         Console.WriteLine("your pay will be: $" + pay.ToString("0.00") + ".");
-        Console.WriteLine("The gevernment will take: $" + taxes + ".");
+        Console.WriteLine("The gevernment will take: $" + taxes.ToString("0.00") + ".");
 
         Console.WriteLine("\nDone.");
-        }
+    }
 }

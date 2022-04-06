@@ -8,10 +8,13 @@ class Program
 {
     public static void Main(string[] args)
     {
-        //input
+        const float TAX_RATE = 0.18F;
         float hours;
         float rate;
+        double pay;
+        double taxes;
 
+        // input
         Console.WriteLine("This program finds the payment you should get.");
         Console.WriteLine("");
 
@@ -20,9 +23,9 @@ class Program
         Console.Write("Enter the hourly rate: ");
         rate = Convert.ToInt32(Console.ReadLine());
 
-        //process
-        double pay = (hours * rate) * (1 - 0.18);
-        double taxes = ((hours * rate) * 0.18);
+        // process
+        pay = (hours * rate) * (1 - TAX_RATE);
+        taxes = ((hours * rate) * TAX_RATE);
 
         //output
         Console.WriteLine("");
